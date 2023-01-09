@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <!-- image slider start -->
+    <div class="slider">
+        <div class="slides">
+            <!-- radio buttons start -->
+            <input type="radio" name="radion-btn1" id="radio1">
+            <input type="radio" name="radion-btn1" id="radio2">
+            <input type="radio" name="radion-btn1" id="radio3">
+            <input type="radio" name="radion-btn1" id="radio4">
+            <!-- radion buttons end -->
+
+            <!-- slide images start -->
+            <div class="slide first">
+                <img src="/img/agelgel.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/img/messi.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/img/old-barn.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="/img/oil.jpeg" alt="">
+            </div>
+            <!-- slied images end -->
+        </div>
+        <!-- manual navigation start -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!-- maual navigation end -->
+    </div>
+    <!-- image slider end -->
+    <script>
+        var counter = 1;
+        setInterval(() => {
+           document.getElementById('radion' + counter).checked = true;
+           counter++;
+            if(counter > 4){
+                counter = 1;
+            } 
+        }, 5000);
+    </script>
+</body>
+</html>

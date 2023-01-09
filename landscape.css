@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(236, 236, 236);
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    color: #262626;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 10px;
+    padding-top: 0;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* nav */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 10px 0;
+    font-size: 14px;
+    background: #ebebeb;
+    transition: all 0.3s ease-in-out;
+}
+.main-nav .logo {
+    width: 90px;
+    padding-left: 2px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.main-nav ul {
+    display: flex;
+}
+.main-nav ul li {
+    padding:0 10px;
+}
+.main-nav ul li a {
+    padding-bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
+.main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+}
+
+.main-nav ul.main-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+.active {
+    position: fixed;
+    top: 0;
+    background-color:#ffffff;
+    width: 100%;
+    z-index: 1;
+    height: 80px;}
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background:#262626 ;
+    color: white;
+    font-size: 15px;
+}
+.join{
+  width:100%;  
+  margin-top: 30px;
+  height: 60px;
+}
+.visit-btn {
+    cursor: pointer;
+    border: 0;
+    width: 100%;
+    background: #262626;
+    color: rgb(136, 146, 142);
+    font-size: 15px;
+    height: 80px;
+    padding: 25px;
+    
+}
+.btn:hover {
+    opacity: 0.8;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+.menu-btn img{
+    width: 40px;
+}
+.menu-btn:hover {
+    opacity: 0.7;
+}
+/* showcase */
+.showcase::before{
+    content: '';
+    background: rgba(0,0, 0, 0.6);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.showcase {
+    margin-top: 10px;
+    width: 100%;
+    height: 100vh;
+    background: url("./img/All Paintings/Landscape/LA11-Weyeyet.jpg")
+    no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 110px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.showcase h2{
+    font-size: 50px;
+}
+.showcase h2, .showcase p {
+    margin-bottom: 10px;
+    color: white;
+}
+.showcase .btn {
+    margin-top: 15px;
+}
+
+/* home cards */
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 1300;
+}
+
+.home-cards img {
+    width:100%;
+    margin-top: 5px;
+    position: relative;
+}
+.home-cards h3 {
+ margin-bottom: 5px;
+ opacity: 1;
+}
+.home-cards h4 {
+    font-size: 16px;
+    color: black;
+}
+.home-cards p {
+    margin-top: 20px;
+    font-size: 12px;
+    position: relative;
+    bottom: 20px;
+    color: black;
+}
+.home-cards a {
+    display: inline-block;
+    padding-top: 10px;
+    color: #ffffff;
+}
+.details{
+    background: #ffffff;
+    padding: 15px;
+    padding-top: 0px;
+    margin-top: 0;
+    color: white;
+    opacity: 0.8;
+    position: relative;
+    bottom: 5px;
+    font-size: 25px;
+    height: 80px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px rgba(0,0, 0, 0.6);
+}
+.download-icon{
+    position: absolute;
+    bottom: 10px;
+    width: 30px;
+    right: 10px;
+    opacity: 0.6; 
+    outline: none;
+    border:0; 
+    background: none; 
+}
+.lovebtn {
+    position: absolute;
+    bottom: 10px;
+    width: 25px;
+    right: 50px;
+    outline: none;
+    border: none;
+    opacity: 0.5;
+    background: none;
+}
+.lovebtn2 {
+    position: absolute;
+    bottom: 10px;
+    width: 25px;
+    right: 50px;
+    outline: none;
+    border: none;
+    opacity: 1;
+    background: none;
+}
+.download-icon:hover{
+    opacity: 0.9;
+}
+.lovebtn:hover{
+    opacity: 0.9;
+}
+.red {
+    display: none;
+}
+.details:hover{
+    opacity: 0.9;
+}
+.home-cards h4:hover{
+    color: rgba(83, 102, 104, 0.945);
+}
+
+/* xbox */
+.xbox::before {
+    content:'';
+    background: rgba(0,0, 0, 0.7);
+    z-index: -1;
+    width: 100%;
+    height: 450px;
+    position:absolute;
+}
+.xbox {
+    position: relative;
+    color: white;
+    margin-top: 20px;
+    height: 450px;
+    width: 100%;
+    z-index: 0;
+    background: url("./img/7photo\ 2.jpg") no-repeat center center/cover; */
+}
+
+.xbox .content {
+    width: 60%;
+    padding: 50px 0 0 30px;
+    align-items: center;
+    z-index: 0;
+}
+
+.xbox p {
+    margin: 10px o 20px;
+    color: rgb(218, 218, 218);
+    z-index: 0;
+}
+/* footer */
+.footer {
+    background: rgb(180, 179, 179);
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+   
+}
+.footer div {
+    padding: 10px;
+}
+.foot ul {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    
+}
+.foot{
+    justify-content: center;
+    justify-items: center;
+}
+.foot ul li{
+    margin: 25px;
+    padding-left: 10px;
+    text-align: center;
+    justify-items: center;
+
+}
+img:hover{
+    opacity: 0.9;
+    transition: ease-in-out 2s;
+}
+@media(max-width: 1000px) {
+    .home-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 700px) {
+    .container{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+    .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-nav ul.right-menu {
+        margin-right: 50px;
+        position: fixed;
+    }
+    .active {
+        position: fixed;
+        top: 0;
+        background-color:#ffffff;
+        width: 100%;
+        z-index: 1;
+        height: 70px;
+    }
+    .main-nav{
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .menu-btn img{
+        z-index: 2;
+        position: fixed;
+        right: 20px;
+        top: 20px; 
+        align-items: center;
+        width: 30px;
+    }
+    .main-nav .logo{
+        width: 70px;
+    }
+    .main-nav ul.main-menu {
+        display: block;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background: #d3d2d2;
+        width: 50%;
+        height: 80vh;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 30px;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .main-nav ul.main-menu.show {
+        transform: translateX(-20px);
+    }
+    .main-nav ul.main-menu li {
+        padding: 10px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 500px) {
+    .home-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main-nav{
+        position: fixed;
+        top: 0;
+        background-color:#ffffff;
+        width: 100%;
+        z-index: 1;
+        height: 45px;
+    
+    }
+    .main-nav .logo{
+        width: 40px;
+    }
+    .menu-btn img{
+        position: fixed;
+        right: 20px;
+        top: 10px; 
+        align-items: center;
+        width: 20px;
+    }
+}
